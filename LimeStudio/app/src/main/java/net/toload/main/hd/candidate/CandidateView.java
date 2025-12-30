@@ -201,50 +201,34 @@ public class CandidateView extends View implements View.OnClickListener {
 
         for (int i = 0; i < n; i++) {
             int attr = a.getIndex(i);
-
-            switch (attr) {
-                case R.styleable.LIMECandidateView_suggestHighlight:
-                    mDrawableSuggestHighlight = a.getDrawable(attr);
-                    break;
-                case R.styleable.LIMECandidateView_voiceInputIcon:
-                    mDrawableVoiceInput = a.getDrawable(attr);
-                    break;
-                case R.styleable.LIMECandidateView_ExpandButtonIcon:
-                    mDrawableExpandButton = a.getDrawable(attr);
-                    break;
-                case R.styleable.LIMECandidateView_closeButtonIcon:
-                    mDrawableCloseButton = a.getDrawable(attr);
-                    break;
-                case R.styleable.LIMECandidateView_candidateBackground:
-                    mColorBackground = a.getColor(attr,  ContextCompat.getColor(context, R.color.third_background_light));
-                    break;
-                case R.styleable.LIMECandidateView_composingTextColor:
-                    mColorComposingText = a.getColor(attr,  ContextCompat.getColor(context, R.color.second_foreground_light));
-                    break;
-                case R.styleable.LIMECandidateView_composingBackgroundColor:
-                    mColorComposingBackground = a.getColor(attr,  ContextCompat.getColor(context, R.color.composing_background_light));
-                    break;
-                case R.styleable.LIMECandidateView_candidateNormalTextColor:
-                    mColorNormalText = a.getColor(attr,  ContextCompat.getColor(context, R.color.foreground_light));
-                    break;
-                case R.styleable.LIMECandidateView_candidateNormalTextHighlightColor:
-                    mColorNormalTextHighlight = a.getColor(attr,  ContextCompat.getColor(context, R.color.foreground_light));
-                    break;
-                case R.styleable.LIMECandidateView_composingCodeColor:
-                    mColorComposingCode = a.getColor(attr,  ContextCompat.getColor(context, R.color.color_common_green_hl));
-                    break;
-                case R.styleable.LIMECandidateView_composingCodeHighlightColor:
-                    mColorComposingCodeHighlight = a.getColor(attr,  ContextCompat.getColor(context, R.color.third_background_light));
-                    break;
-                case R.styleable.LIMECandidateView_spacerColor:
-                    mColorSpacer = a.getColor(attr,  ContextCompat.getColor(context, R.color.candidate_spacer));
-                    break;
-                case R.styleable.LIMECandidateView_selKeyColor:
-                    mColorSelKey = a.getColor(attr,  ContextCompat.getColor(context, R.color.candidate_selection_keys));
-                    break;
-                case R.styleable.LIMECandidateView_selKeyShiftedColor:
-                    mColorSelKeyShifted = a.getColor(attr,  ContextCompat.getColor(context, R.color.color_common_green_hl));
-                    break;
+            if (attr == R.styleable.LIMECandidateView_suggestHighlight) {
+                mDrawableSuggestHighlight = a.getDrawable(attr);
+            } else if (attr == R.styleable.LIMECandidateView_voiceInputIcon) {
+                mDrawableVoiceInput = a.getDrawable(attr);
+            } else if (attr == R.styleable.LIMECandidateView_ExpandButtonIcon) {
+                mDrawableExpandButton = a.getDrawable(attr);
+            } else if (attr == R.styleable.LIMECandidateView_closeButtonIcon) {
+                mDrawableCloseButton = a.getDrawable(attr);
+            } else if (attr == R.styleable.LIMECandidateView_candidateBackground) {
+                mColorBackground = a.getColor(attr, ContextCompat.getColor(context, R.color.third_background_light));
+            } else if (attr == R.styleable.LIMECandidateView_composingTextColor) {
+                mColorComposingText = a.getColor(attr, ContextCompat.getColor(context, R.color.second_foreground_light));
+            } else if (attr == R.styleable.LIMECandidateView_composingBackgroundColor) {
+                mColorComposingBackground = a.getColor(attr, ContextCompat.getColor(context, R.color.composing_background_light));
+            } else if (attr == R.styleable.LIMECandidateView_candidateNormalTextColor) {
+                mColorNormalText = a.getColor(attr, ContextCompat.getColor(context, R.color.foreground_light));
+            } else if (attr == R.styleable.LIMECandidateView_candidateNormalTextHighlightColor) {
+                mColorNormalTextHighlight = a.getColor(attr, ContextCompat.getColor(context, R.color.foreground_light));
+            } else if (attr == R.styleable.LIMECandidateView_composingCodeColor) {
+                mColorComposingCode = a.getColor(attr, ContextCompat.getColor(context, R.color.color_common_green_hl));
+            } else if (attr == R.styleable.LIMECandidateView_composingCodeHighlightColor) {
+                mColorComposingCodeHighlight = a.getColor(attr, ContextCompat.getColor(context, R.color.third_background_light));
+            } else if (attr == R.styleable.LIMECandidateView_spacerColor) {
+                mColorSpacer = a.getColor(attr, ContextCompat.getColor(context, R.color.candidate_spacer));
+            } else if (attr == R.styleable.LIMECandidateView_selKeyColor) {
+                mColorSelKey = a.getColor(attr, ContextCompat.getColor(context, R.color.candidate_selection_keys));
+            } else if (attr == R.styleable.LIMECandidateView_selKeyShiftedColor) {
+                mColorSelKeyShifted = a.getColor(attr, ContextCompat.getColor(context, R.color.color_common_green_hl));
             }
         }
 
